@@ -8,7 +8,7 @@
 
         <q-editor
           min-height="40vh"
-          toolbar-bg="orange-14"
+          toolbar-bg="orange-6"
           toolbar-text-color="white"
           v-model="question"
           :definitions="{
@@ -41,7 +41,7 @@
         transition-show="flip-down"
         transition-hide="flip-up"
       >
-        <q-card class="bg-orange-14 text-white">
+        <q-card class="bg-orange-6 text-white">
           <q-card-section>
             <div class="text-h6 text-center">{{ message.status }}</div>
           </q-card-section>

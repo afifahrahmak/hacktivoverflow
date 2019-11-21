@@ -46,7 +46,7 @@
             v-model="answer"
             autofocus
             min-height="50vh"
-            toolbar-bg="orange-14"
+            toolbar-bg="orange-6"
             toolbar-text-color="white"
             :definitions="{
             bold: {label: 'Bold', icon: null, tip: 'My bold tooltip'}
@@ -68,7 +68,7 @@
       transition-show="flip-down"
       transition-hide="flip-up"
     >
-      <q-card class="bg-orange-14 text-white">
+      <q-card class="bg-orange-6 text-white">
         <q-card-section>
           <div class="text-h6 text-center">{{ message.status }}</div>
         </q-card-section>

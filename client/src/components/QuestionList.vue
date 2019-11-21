@@ -60,7 +60,7 @@
       transition-show="flip-down"
       transition-hide="flip-up"
     >
-      <q-card class="bg-orange-14 text-white">
+      <q-card class="bg-orange-6 text-white">
         <q-card-section>
           <div class="text-h6 text-center">{{ message.status }}</div>
         </q-card-section>

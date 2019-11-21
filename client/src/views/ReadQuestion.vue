@@ -69,7 +69,7 @@
         <q-editor
           min-height="10vh"
           toolbar-bg="grey-4"
-          toolbar-text-color="orange-14"
+          toolbar-text-color="orange-6"
           v-model="answer"
           :definitions="{
             bold: {label: 'Bold', icon: null, tip: 'My bold tooltip'}

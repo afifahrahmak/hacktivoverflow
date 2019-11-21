@@ -34,11 +34,11 @@
         </q-card-section>
 
         <q-card-actions align="right">
-          <q-btn flat label="Cancel" color="orange-14" v-close-popup />
+          <q-btn flat label="Cancel" color="orange-6" v-close-popup />
           <q-btn
             flat
             label="Delete Question"
-            color="orange-14"
+            color="orange-6"
             :outline="true"
             v-close-popup
             @click="deleteQuestion"
@@ -54,7 +54,7 @@
       transition-show="flip-down"
       transition-hide="flip-up"
     >
-      <q-card class="bg-orange-14 text-white">
+      <q-card class="bg-orange-6 text-white">
         <q-card-section>
           <div class="text-h6 text-center">{{ message.status }}</div>
         </q-card-section>
