@@ -111,24 +111,6 @@ export default {
     };
   },
   methods: {
-    generateVoteColorUpvote() {
-      if (this.flagColor === 1) {
-        this.colorUpvote = "orange-13";
-      } else if (this.flagColor === -1) {
-        this.colorUpvote = "grey-10";
-      } else {
-        this.colorUpvote = "grey-10";
-      }
-    },
-    generateVoteColorDownvote() {
-      if (this.flagColor === -1) {
-        this.colorDownvote = "orange-13";
-      } else if (this.flagColor === 1) {
-        this.colorDownvote = "grey-10";
-      } else {
-        this.colorDownvote = "grey-10";
-      }
-    },
     answerAsycn() {
       this.$store
         .dispatch("answer", {
@@ -158,22 +140,6 @@ export default {
           return question._id === this.$route.params.id;
         });
         this.question = question[0];
-        let flag;
-        let votes = this.question.votes;
-        votes.forEach(vote => {
-          if (vote.user === id) {
-            if (vote.value === 1) {
-              flag = 1;
-            } else if (vote.value === -1) {
-              flag = -1;
-            } else {
-              flag = 0;
-            }
-          }
-        });
-        this.flagColor = flag;
-        this.generateVoteColorUpvote();
-        this.generateVoteColorDownvote();
       });
     },
     toFetch() {

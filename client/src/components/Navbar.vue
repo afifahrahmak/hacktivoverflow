@@ -92,9 +92,7 @@ export default {
       // }
     },
     redirectToHome() {
-      if (this.$route.path !== "/") {
-        this.$router.push("/");
-      }
+      this.$router.push("/");
     },
     eraseSearch() {
       this.text = "";

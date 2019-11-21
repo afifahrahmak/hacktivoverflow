@@ -15,6 +15,9 @@ export default {
     Navbar
   },
   created() {
+    if (!localStorage.getItem("token")) {
+      this.$router.push("/welcome");
+    }
     this.$store.dispatch("auth");
   },
   computed: {
