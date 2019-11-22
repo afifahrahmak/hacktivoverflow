@@ -5,7 +5,7 @@
       <h5>sign up</h5>
     </div>
     <div>
-      <q-form style=" width: 420px; height: 460px; padding: 5%;" @submit.prevent="login">
+      <q-form style=" width: 420px; height: 460px; padding: 5%;" @submit.prevent="register">
         <q-input
           class
           stack-label

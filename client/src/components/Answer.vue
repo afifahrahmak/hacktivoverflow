@@ -48,44 +48,6 @@ export default {
     };
   },
   methods: {
-    // generateVoteColorUpvote() {
-    //   if (this.flagColor === 1) {
-    //     this.colorUpvote = "orange-14";
-    //   } else if (this.flagColor === -1) {
-    //     this.colorUpvote = "grey-10";
-    //   } else {
-    //     this.colorUpvote = "grey-10";
-    //   }
-    // },
-    // generateVoteColorDownvote() {
-    //   if (this.flagColor === -1) {
-    //     this.colorDownvote = "orange-14";
-    //   } else if (this.flagColor === 1) {
-    //     this.colorDownvote = "grey-10";
-    //   } else {
-    //     this.colorDownvote = "grey-10";
-    //   }
-    // },
-    // genereteColor() {
-    //   let votes = this.answer.votes;
-    //   let user = jwt.verify(localStorage.getItem("token"), "rahasia");
-    //   let id = user._id;
-    //   let flag;
-    //   votes.forEach(vote => {
-    //     if (vote.user === id) {
-    //       if (vote.value === 1) {
-    //         flag = 1;
-    //       } else if (vote.value === -1) {
-    //         flag = -1;
-    //       } else {
-    //         flag = 0;
-    //       }
-    //     }
-    //   });
-    //   this.flagColor = flag;
-    //   this.generateVoteColorUpvote();
-    //   this.generateVoteColorDownvote();
-    // },
     showScore() {
       let votes = this.answer.votes;
       this.score = 0;

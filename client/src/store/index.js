@@ -91,14 +91,14 @@ export default new Vuex.Store({
     login(context, user) {
       return Axios({
         method: "post",
-        url: "http://localhost:3000/user/login",
+        url: "http://54.169.133.84/user/login",
         data: user
       });
     },
     register(context, user) {
       return Axios({
         method: "post",
-        url: "http://localhost:3000/user/register",
+        url: "http://54.169.133.84/user/register",
         data: user
       });
     },
@@ -106,7 +106,7 @@ export default new Vuex.Store({
       return new Promise(function (resolve, reject) {
         Axios({
           method: 'post',
-          url: 'http://localhost:3000/question/',
+          url: 'http://54.169.133.84/question/',
           data: payload,
           headers: { token: localStorage.getItem('token') }
         })
@@ -122,7 +122,7 @@ export default new Vuex.Store({
       return new Promise(function (resolve, reject) {
         Axios({
           method: 'patch',
-          url: `http://localhost:3000/question/${payload.id}`,
+          url: `http://54.169.133.84/question/${payload.id}`,
           data: payload.question,
           headers: { token: localStorage.getItem('token') }
         })
@@ -140,7 +140,7 @@ export default new Vuex.Store({
       return new Promise(function (resolve, reject) {
         Axios({
           method: 'get',
-          url: 'http://localhost:3000/question/',
+          url: 'http://54.169.133.84/question/',
         })
           .then(({ data }) => {
             context.commit('FETCHQUESTION', data)
@@ -154,7 +154,7 @@ export default new Vuex.Store({
     fetchTrendingTag(context, payload) {
       Axios({
         method: 'get',
-        url: `http://localhost:3000/question/tag`
+        url: `http://54.169.133.84/question/tag`
       })
         .then(({ data }) => {
           context.commit('FETCHTRENDINGTAG', data)
@@ -167,7 +167,7 @@ export default new Vuex.Store({
       return new Promise(function (resolve, reject) {
         Axios({
           method: 'get',
-          url: `http://localhost:3000/question/user`,
+          url: `http://54.169.133.84/question/user`,
           headers: { token: localStorage.getItem('token') }
         })
           .then(({ data }) => {
@@ -183,7 +183,7 @@ export default new Vuex.Store({
       return new Promise(function (resolve, reject) {
         Axios({
           method: 'patch',
-          url: `http://localhost:3000/question/upvote/${payload}`,
+          url: `http://54.169.133.84/question/upvote/${payload}`,
           headers: { token: localStorage.getItem('token') }
         })
           .then(({ data }) => {
@@ -202,7 +202,7 @@ export default new Vuex.Store({
       return new Promise(function (resolve, reject) {
         Axios({
           method: 'patch',
-          url: `http://localhost:3000/question/downvote/${payload}`,
+          url: `http://54.169.133.84/question/downvote/${payload}`,
           headers: { token: localStorage.getItem('token') }
         })
           .then(({ data }) => {
@@ -221,7 +221,7 @@ export default new Vuex.Store({
       return new Promise(function (resolve, reject) {
         Axios({
           method: 'post',
-          url: `http://localhost:3000/answer/${payload.questionId}`,
+          url: `http://54.169.133.84/answer/${payload.questionId}`,
           data: {
             answer: payload.answer
           },
@@ -239,7 +239,7 @@ export default new Vuex.Store({
       return new Promise(function (resolve, reject) {
         Axios({
           method: 'patch',
-          url: `http://localhost:3000/answer/upvote/${payload}`,
+          url: `http://54.169.133.84/answer/upvote/${payload}`,
           headers: { token: localStorage.getItem('token') }
         })
           .then(({ data }) => {
@@ -254,7 +254,7 @@ export default new Vuex.Store({
       return new Promise(function (resolve, reject) {
         Axios({
           method: 'patch',
-          url: `http://localhost:3000/answer/downvote/${payload}`,
+          url: `http://54.169.133.84/answer/downvote/${payload}`,
           headers: { token: localStorage.getItem('token') }
         })
           .then(({ data }) => {
@@ -269,7 +269,7 @@ export default new Vuex.Store({
       return new Promise(function (resolve, reject) {
         Axios({
           method: 'delete',
-          url: `http://localhost:3000/question/${payload}`,
+          url: `http://54.169.133.84/question/${payload}`,
           headers: { token: localStorage.getItem('token') }
         })
           .then(({ data }) => {
@@ -285,7 +285,7 @@ export default new Vuex.Store({
       return new Promise(function (resolve, reject) {
         Axios({
           method: "get",
-          url: 'http://localhost:3000/answer',
+          url: 'http://54.169.133.84/answer',
           headers: { token: localStorage.getItem('token') }
         })
           .then(({ data }) => {
@@ -301,7 +301,7 @@ export default new Vuex.Store({
       return new Promise(function (resolve, reject) {
         Axios({
           method: 'patch',
-          url: `http://localhost:3000/answer/${payload.id}`,
+          url: `http://54.169.133.84/answer/${payload.id}`,
           data: { answer: payload.answer },
           headers: { token: localStorage.getItem('token') }
         })
